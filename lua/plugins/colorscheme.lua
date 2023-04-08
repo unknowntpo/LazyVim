@@ -10,6 +10,10 @@ return {
       colorscheme = "catppuccin",
       lazy = true,
       flavour = "mocha",
+      background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+      },
     },
   },
 }
