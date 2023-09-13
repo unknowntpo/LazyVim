@@ -142,7 +142,7 @@ return {
     opts = {
       ensure_installed = {
         "bash",
-        "help",
+        --        "help",
         "html",
         "javascript",
         "json",
@@ -166,7 +166,10 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
+      -- ignore error message
+      -- https://github.com/LazyVim/LazyVim/issues/524
       -- add tsx and treesitter
+      opts.ignore_install = { "help" }
       vim.list_extend(opts.ensure_installed, {
         "tsx",
         "typescript",
