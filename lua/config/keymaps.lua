@@ -13,16 +13,15 @@ vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC
 
 -- map("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
 --
+--
+-- suggested by ChatGPT
+-- Ref: https://chat.openai.com/share/23890c30-09bc-4303-b482-9e5f3440b289
 local hop = require("hop")
-local directions = require("hop.hint").HintDirection
--- vim.keymap.set("", "f", function()
--- hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = false })
--- end, { remap = true })
 
 vim.keymap.set("", "\\w", function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = false })
+  hop.hint_words()
 end, { remap = true })
 
 vim.keymap.set("", "\\b", function()
-  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = false })
+  hop.hint_words()
 end, { remap = true })
