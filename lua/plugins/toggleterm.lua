@@ -6,7 +6,7 @@ return {
     keys = { { "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
     opts = {
       open_mapping = [[<leader>tt]],
-      direction = "float",
+      direction = "vertical",
       shade_filetypes = {},
       hide_numbers = true,
       insert_mappings = true,
