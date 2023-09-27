@@ -7,6 +7,7 @@ return {
     opts = {
       open_mapping = [[<leader>tt]],
       direction = "vertical",
+      size = vim.o.columns * 0.4,
       shade_filetypes = {},
       hide_numbers = true,
       insert_mappings = true,
