@@ -25,3 +25,5 @@ end, { remap = true })
 vim.keymap.set("", "\\b", function()
   hop.hint_words()
 end, { remap = true })
+
+vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true })
