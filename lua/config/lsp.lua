@@ -25,6 +25,7 @@ return {
       setup = {
         -- example to setup with typescript.nvim
         tsserver = function(_, opts)
+          vim.cmd("nvm use default 18")
           require("typescript").setup({
             server = {
               cmd = opts,
@@ -55,6 +56,9 @@ return {
 
         -- Rust
         "rust-analyzer",
+        -- Python
+        "black",
+        "pyright",
       },
     },
   },
