@@ -59,6 +59,8 @@ return {
         -- Python
         "black",
         "pyright",
+        -- Java
+        "jdtls",
       },
     },
   },
