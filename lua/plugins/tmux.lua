@@ -1,3 +1,5 @@
+return {}
+
 -- copied from https://github.com/alexghergh/nvim-tmux-navigation
 --[[
 return {
