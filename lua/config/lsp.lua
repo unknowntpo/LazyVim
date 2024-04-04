@@ -10,6 +10,7 @@ return {
           vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
         end)
+        require("java").setup()
       end,
     },
     ---@class PluginLspOpts
@@ -18,6 +19,7 @@ return {
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        jdtls = {},
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
@@ -33,7 +35,13 @@ return {
           })
           return true
         end,
-        -- Specify * to use this function as a fallback for any server
+        jdtls = function(_, opts)
+          require("jdtls").setup({
+            server = {
+              cmd = opts,
+            },
+          })
+        end,
         -- ["*"] = function(server, opts) end,
       },
     },
