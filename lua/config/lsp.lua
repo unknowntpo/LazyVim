@@ -78,7 +78,6 @@ return {
         "rust-analyzer",
         -- Python
         "ruff",
-        "pyright",
         -- Java
         "jdtls",
       },
