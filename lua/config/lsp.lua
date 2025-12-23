@@ -40,6 +40,18 @@ return {
             server = {
               cmd = opts,
             },
+            init_options = {
+              jvm_args = {
+                "-XX:+UseZGC",
+                "-Xmx8G",
+                "-XX:+ZGenerational",
+                "-XX:ZCollectionInterval=5",
+                "-XX:ZAllocationSpikeTolerance=2.0",
+                "-XX:+UnlockExperimentalVMOptions",
+                "-XX:SoftMaxHeapSize=3G",
+                "-Xlog:gc*:file=gc.log:time,uptimemillis:filecount=5,filesize=10m",
+              },
+            },
           })
         end,
         -- ["*"] = function(server, opts) end,
@@ -65,7 +77,7 @@ return {
         -- Rust
         "rust-analyzer",
         -- Python
-        "black",
+        "ruff",
         "pyright",
         -- Java
         "jdtls",
