@@ -5,3 +5,5 @@
 local opt = vim.opt
 
 opt.swapfile = false -- disable swap file
+opt.wrap = true -- enable line wrapping
+opt.linebreak = true -- break at word boundaries instead of mid-word.
