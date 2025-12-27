@@ -6,7 +6,7 @@ return {
     keys = { { "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
     opts = {
       open_mapping = [[<leader>tt]],
-      direction = "vertical",
+      direction = "float",
       size = vim.o.columns * 0.4,
       shade_filetypes = {},
       hide_numbers = true,
